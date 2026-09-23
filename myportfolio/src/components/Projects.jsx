@@ -10,7 +10,7 @@ export default function Projects() {
         <SectionHeading
           eyebrow="Portfolio"
           title="Featured Projects"
-          text="Practical applications built with Java, Spring Boot, React and SQL — from REST APIs to responsive interfaces."
+          text="Scalable REST APIs, asynchronous database services, and containerized backend architectures built with Python, FastAPI, PostgreSQL, and Docker."
         />
 
         <ul className="mt-12 grid gap-5 md:grid-cols-2">

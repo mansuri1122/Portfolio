@@ -3,6 +3,8 @@ import { certifications } from '../data/content.js'
 import { LinkButton, Reveal, SectionHeading } from './ui.jsx'
 
 export default function Certifications() {
+  if (!certifications || certifications.length === 0) return null
+
   return (
     <section id="certifications" className="relative py-24 md:py-32">
       <div className="mx-auto max-w-[1200px] px-5 md:px-10">

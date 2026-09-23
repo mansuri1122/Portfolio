@@ -55,7 +55,7 @@ export default function Navbar({ active, theme, onToggleTheme }) {
         aria-label="Primary"
         className="mx-auto flex h-[68px] max-w-[1400px] items-center justify-between gap-4 px-5 md:px-10"
       >
-        <a href="#home" className="flex items-center gap-3" aria-label="Sahil Khan — home">
+        <a href="#home" className="flex items-center gap-3" aria-label={`${profile.name} — home`}>
           <Avatar />
           <span className="font-display text-[1.05rem] font-bold tracking-tight">
             {profile.firstName} <span className="text-brand">{profile.lastName}</span>

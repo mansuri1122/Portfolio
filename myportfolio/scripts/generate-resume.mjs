@@ -1,12 +1,21 @@
 // Generates public/Sahil_Khan_Resume.pdf from src/data/content.js.
 // Run:  npm run generate-resume   (also runs automatically before `dev` and `build`)
-import { mkdir, writeFile } from 'node:fs/promises'
+import { access, mkdir, writeFile } from 'node:fs/promises'
+import { constants } from 'node:fs'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { PDFDocument, StandardFonts, rgb } from 'pdf-lib'
 import { about, achievements, certifications, profile, projects, skillGroups } from '../src/data/content.js'
 
 const OUT = resolve(dirname(fileURLToPath(import.meta.url)), '../public', profile.resumeFileName)
+
+try {
+  await access(OUT, constants.F_OK)
+  console.log(`Existing resume found at ${OUT} — skipping auto-generation to preserve user's original PDF.`)
+  process.exit(0)
+} catch {
+  // Generate PDF only if not present
+}
 
 const PAGE = { w: 595.28, h: 841.89 }
 const M = 46

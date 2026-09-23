@@ -1,15 +1,15 @@
 import { motion, useReducedMotion } from 'framer-motion'
 import { Binary, Boxes, Cloud, Container } from 'lucide-react'
-import { CodeMark, GithubMark, JavaMark, MySqlMark, ReactMark, SpringMark } from './BrandIcons.jsx'
-import { exploring, images } from '../data/content.js'
+import { CodeMark, DockerMark, FastApiMark, GithubMark, PostgresMark, PythonMark } from './BrandIcons.jsx'
+import { exploring, images, profile } from '../data/content.js'
 
 // Positions are % of the visual box (700 x 690 design grid) so it scales cleanly.
 const TILES = [
-  { key: 'react', left: 15.7, top: 2.5, w: 13, rot: -9, icon: <ReactMark className="w-[68%]" />, dur: 6.2, delay: 0 },
-  { key: 'java', left: 0.6, top: 24.5, w: 15.2, rot: -11, icon: <JavaMark className="w-[72%]" />, dur: 7, delay: -2 },
-  { key: 'mysql', left: 5.2, top: 48.5, w: 16, rot: -13, icon: <MySqlMark className="w-[78%]" />, dur: 6.6, delay: -1 },
-  { key: 'github', left: 47.6, top: 60.5, w: 13, rot: 7, icon: <GithubMark className="w-[62%] text-white" />, dur: 7.4, delay: -3 },
-  { key: 'spring', left: 66.4, top: 30, w: 15, rot: 9, icon: <SpringMark className="w-[66%]" />, dur: 6.8, delay: -1.5 },
+  { key: 'python', left: 15.7, top: 2.5, w: 13, rot: -9, icon: <PythonMark className="w-[68%]" />, dur: 6.2, delay: 0 },
+  { key: 'fastapi', left: 0.6, top: 24.5, w: 15.2, rot: -11, icon: <FastApiMark className="w-[72%]" />, dur: 7, delay: -2 },
+  { key: 'postgres', left: 5.2, top: 48.5, w: 16, rot: -13, icon: <PostgresMark className="w-[78%]" />, dur: 6.6, delay: -1 },
+  { key: 'docker', left: 47.6, top: 60.5, w: 13, rot: 7, icon: <DockerMark className="w-[62%]" />, dur: 7.4, delay: -3 },
+  { key: 'github', left: 66.4, top: 30, w: 15, rot: 9, icon: <GithubMark className="w-[66%] text-white" />, dur: 6.8, delay: -1.5 },
   { key: 'code', left: 72, top: 50.5, w: 14, rot: 11, icon: <CodeMark className="w-[52%] text-white" />, dur: 5.8, delay: -2.6 },
 ]
 
@@ -77,7 +77,7 @@ export default function HeroVisual() {
       </div>
       <img
         src={images.hero}
-        alt="Portrait of Sahil Khan"
+        alt={`Portrait of ${profile.name}`}
         width="760"
         height="838"
         fetchPriority="high"
@@ -97,7 +97,7 @@ export default function HeroVisual() {
         aria-hidden="true"
       >
         <p className="handwriting text-[clamp(1.05rem,2vw,1.55rem)]" style={{ transform: 'rotate(5deg)' }}>
-          Code<br />Build<br />Learn<br />Repeat
+          Design<br />Build<br />Optimize<br />Scale
         </p>
         <svg viewBox="0 0 60 50" className="mt-1 ml-1 w-[42%] text-faint" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round">
           <path d="M50 4c6 14-4 30-34 36" />

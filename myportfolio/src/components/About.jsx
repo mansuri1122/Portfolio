@@ -5,7 +5,7 @@ import { Reveal, SectionHeading } from './ui.jsx'
 const VALUE_ICONS = { puzzle: Puzzle, book: BookOpen, users: Users, target: Target }
 
 function highlight(text) {
-  return text.split(/(Java Full Stack Development)/).map((part, i) =>
+  return text.split(/(Python|FastAPI|PostgreSQL|asynchronous RESTful services|220\+ algorithmic challenges)/).map((part, i) =>
     i % 2 ? (
       <b key={i} className="font-semibold text-fg">
         {part}
@@ -35,7 +35,7 @@ export default function About() {
             >
               <img
                 src={images.about1}
-                alt="Sahil Khan in a blazer"
+                alt={`${about.plateTitle} in a blazer`}
                 width="642"
                 height="945"
                 loading="lazy"

@@ -1,94 +1,52 @@
-// Brand marks are drawn as inline SVG (lucide-react 1.x no longer ships brand icons).
+// Brand marks drawn as inline SVG
 
-export function ReactMark({ className = '' }) {
+export function PythonMark({ className = '' }) {
   return (
-    <svg viewBox="-12 -12 24 24" className={className} fill="none" stroke="#5fd3f5" strokeWidth="1" aria-hidden="true">
-      <ellipse rx="10" ry="4.1" />
-      <ellipse rx="10" ry="4.1" transform="rotate(60)" />
-      <ellipse rx="10" ry="4.1" transform="rotate(120)" />
-      <circle r="1.9" fill="#5fd3f5" stroke="none" />
+    <svg viewBox="0 0 128 128" className={className} aria-hidden="true">
+      <path
+        fill="#3776ab"
+        d="M63.5 6c-26 0-24.5 11.2-24.5 11.2l.03 11.6h25v3.5H23.5S6 30.5 6 57s15.3 25.5 15.3 25.5h9.1v-12.7s-.5-15.3 15-15.3h25.8s14.4.2 14.4-14.1V19.8S87.4 6 63.5 6zm-13.8 7.3a4.7 4.7 0 1 1 0 9.4 4.7 4.7 0 0 1 0-9.4z"
+      />
+      <path
+        fill="#ffd43b"
+        d="M64.5 122c26 0 24.5-11.2 24.5-11.2l-.03-11.6h-25v-3.5h40.5s17.5 1.8 17.5-24.7-15.3-25.5-15.3-25.5h-9.1v12.7s.5 15.3-15 15.3H46.8s-14.4-.2-14.4 14.1v30.6s-1.8 13.8 22.1 13.8zm13.8-7.3a4.7 4.7 0 1 1 0-9.4 4.7 4.7 0 0 1 0 9.4z"
+      />
     </svg>
   )
 }
 
-export function JavaMark({ className = '' }) {
+export function FastApiMark({ className = '' }) {
   return (
-    <svg viewBox="0 0 64 64" className={className} aria-hidden="true">
-      {/* steam */}
+    <svg viewBox="0 0 128 128" className={className} aria-hidden="true">
+      <circle cx="64" cy="64" r="60" fill="#059669" />
       <path
-        d="M34 3c3 4-5 7-5 12 0 3 3 5 3 8-2-2-6-4-5-8 1-5 9-7 7-12z"
-        fill="#f0553a"
+        d="M68 20L34 72h28l-6 36 40-54H68l6-34z"
+        fill="#ffffff"
       />
-      <path d="M40 12c2 3-3 5-3 8 0 2 2 3 2 5-2-1-4-3-3-5 0-3 5-5 4-8z" fill="#f0553a" opacity=".85" />
-      {/* cup */}
-      <path
-        d="M17 31h27v9c0 6-5 10-13 10s-14-4-14-10z"
-        fill="none"
-        stroke="#5b9bf0"
-        strokeWidth="2.4"
-        strokeLinejoin="round"
-      />
-      <path d="M44 33c5 0 8 2 8 5s-4 6-9 6" fill="none" stroke="#5b9bf0" strokeWidth="2.4" strokeLinecap="round" />
-      <path d="M13 55c8 3 24 3 34 0" fill="none" stroke="#5b9bf0" strokeWidth="2.4" strokeLinecap="round" />
-      <text
-        x="32"
-        y="63.5"
-        textAnchor="middle"
-        fontFamily="Plus Jakarta Sans Variable, Inter Variable, sans-serif"
-        fontWeight="700"
-        fontStyle="italic"
-        fontSize="11"
-        fill="#f38b2f"
-      >
-        Java
-      </text>
     </svg>
   )
 }
 
-export function SpringMark({ className = '' }) {
+export function DockerMark({ className = '' }) {
   return (
     <svg viewBox="0 0 64 64" className={className} aria-hidden="true">
       <path
-        d="M32 4.5 55 17.8v28.4L32 59.5 9 46.2V17.8z"
-        fill="#5fc14c"
-        stroke="#94e57f"
-        strokeWidth="2"
-        strokeLinejoin="round"
-      />
-      <path d="M32 19v13" stroke="#0b1a10" strokeWidth="5" strokeLinecap="round" />
-      <path
-        d="M22.5 25.5a14 14 0 1 0 19 0"
-        fill="none"
-        stroke="#0b1a10"
-        strokeWidth="5"
-        strokeLinecap="round"
+        fill="#2496ed"
+        d="M59.2 28.2c-.8-.6-2.6-.9-4.2-.6-.3-.7-.7-1.4-1.2-2-.3-.4-.7-.7-1.1-1-.4-.3-.9-.6-1.4-.7-.2-.1-.5-.2-.7-.2l-.6.2c-.4-.5-.9-1-1.5-1.3-1.6-.9-3.7-.9-5.1-.1l-.6.3v-.6c0-.9-.3-1.8-.8-2.5-.9-1.2-2.5-1.9-4-1.7-.8.1-1.6.4-2.2.9-.6.5-1 1.1-1.3 1.8H2.7c-.7 0-1.3.6-1.3 1.3v13.6c0 1.9.4 3.7 1.1 5.4 1.4 3.4 3.8 6.3 6.9 8.2 4.4 2.7 9.8 4.1 15.1 4.1 8.8 0 17.3-3.6 23.3-9.9 5.8-6.1 8.8-13.8 8.8-14.5 0-.2-.1-.5-.3-.7-.6-.5-1.4-.7-2.1-.8zM12 25h5v5h-5zm7 0h5v5h-5zm7 0h5v5h-5zm0-7h5v5h-5zm7 7h5v5h-5zm0-7h5v5h-5zm7 7h5v5h-5zm0-7h5v5h-5zm7 7h5v5h-5z"
       />
     </svg>
   )
 }
 
-export function MySqlMark({ className = '' }) {
+export function PostgresMark({ className = '' }) {
   return (
-    <svg viewBox="0 0 80 64" className={className} aria-hidden="true">
-      {/* dolphin */}
+    <svg viewBox="0 0 128 128" className={className} aria-hidden="true">
       <path
-        d="M44 6c-9 0-15 6-18 13-2 5-2 9-6 12-3 2-6 2-9 1 4 4 9 5 14 3 3 4 7 6 12 6-1-3-1-5 0-7 6-1 11-5 13-11 1-5-1-10-6-14 3 1 5 1 7 0-2-2-5-3-7-3z"
-        fill="#59b4e6"
+        fill="#336791"
+        d="M64 12C35.3 12 12 35.3 12 64s23.3 52 52 52 52-23.3 52-52S92.7 12 64 12zm25 36.4c-2.3 8.3-6.4 16.2-12.8 22.4 1.7 4.8 2.2 10.3 1.2 15.8-.8 4.7-3.1 9.1-6.6 12.3-3.5 3.2-8.1 5-12.9 5.1-4.8 0-9.4-1.8-12.9-5-3.5-3.2-5.8-7.5-6.6-12.2-.9-5.4-.5-10.9 1.2-15.7-6.4-6.3-10.5-14.2-12.8-22.5-1.5-5.3-2.1-10.8-1.7-16.3.3-4.1 1.4-8.1 3.2-11.8 3.8-7.8 11.2-13.5 19.8-15.6 6.3-1.5 12.9-1.5 19.2 0 8.6 2.1 16 7.8 19.8 15.6 1.8 3.7 2.9 7.7 3.2 11.8.4 5.5-.2 11-1.7 16.3z"
       />
-      <circle cx="50" cy="16" r="1.4" fill="#0a1236" />
-      <text
-        x="40"
-        y="55"
-        textAnchor="middle"
-        fontFamily="Plus Jakarta Sans Variable, Inter Variable, sans-serif"
-        fontWeight="800"
-        fontStyle="italic"
-        fontSize="17"
-      >
-        <tspan fill="#59b4e6">My</tspan>
-        <tspan fill="#f39a2c">SQL</tspan>
-      </text>
+      <circle cx="50" cy="50" r="4" fill="#ffffff" />
+      <circle cx="78" cy="50" r="4" fill="#ffffff" />
     </svg>
   )
 }

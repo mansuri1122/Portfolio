@@ -1,5 +1,5 @@
 import { motion, useReducedMotion } from 'framer-motion'
-import { ArrowRight, ChevronDown, Download, Mail, Power, UserRound } from 'lucide-react'
+import { ArrowRight, ChevronDown, Download, Mail, Terminal, Trophy, Code2, Award } from 'lucide-react'
 import HeroVisual from './HeroVisual.jsx'
 import { profile, stats } from '../data/content.js'
 
@@ -29,9 +29,9 @@ function BadgeIcon() {
 
 const STAT_ICONS = {
   projects: <RingIcon />,
-  commits: <Power size={30} strokeWidth={2.4} className="text-violet" aria-hidden="true" />,
+  commits: <Code2 size={30} strokeWidth={2.4} className="text-violet" aria-hidden="true" />,
   certs: <BadgeIcon />,
-  hackathon: <UserRound size={30} strokeWidth={2.2} className="text-cyan" aria-hidden="true" />,
+  hackathon: <Trophy size={30} strokeWidth={2.2} className="text-cyan" aria-hidden="true" />,
 }
 
 const container = {
@@ -89,7 +89,7 @@ export default function Hero() {
           </motion.p>
 
           <motion.p variants={item} className="mt-5 max-w-[34rem] text-[1.06rem] leading-[1.75] text-muted">
-            {profile.intro.split(/(Java|Spring Boot)/).map((part, i) =>
+            {profile.intro.split(/(Python|FastAPI|PostgreSQL|SQLAlchemy|Docker|Git)/).map((part, i) =>
               i % 2 ? (
                 <b key={i} className="font-medium text-fg">
                   {part}
